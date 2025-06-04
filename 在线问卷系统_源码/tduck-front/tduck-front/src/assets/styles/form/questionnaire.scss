@@ -1,0 +1,138 @@
+/* 问卷填写界面样式 */
+.questionnaire-container {
+  max-width: 1000px; /* 增加宽度 */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .questionnaire-header {
+    text-align: center;
+    margin-bottom: 20px; /* 减小头部下边距 */
+
+    h1, h2 {
+      font-size: 22px; /* 减小标题字体 */
+      color: #333;
+      margin-bottom: 8px; /* 减小标题下边距 */
+      font-weight: 500;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+  }
+
+  .questionnaire-body {
+    margin-top: 20px;
+
+    .form-item-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      border: 1px solid #f0f0f0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-color: #e6f7ff;
+      }
+
+      .item-number {
+        position: absolute;
+        left: -12px;
+        top: 15px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1890ff;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 13px;
+        box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+      }
+
+      .required-mark {
+        color: #f56c6c;
+        margin-right: 4px;
+      }
+
+      .item-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 12px;
+        padding-left: 15px;
+      }
+
+      .item-content {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .questionnaire-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1000;
+
+    .submit-btn {
+      padding: 12px 60px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background-color: #409EFF;
+      color: white;
+      box-shadow: 0 6px 16px rgba(24, 144, 255, 0.35);
+      min-width: 180px;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(24, 144, 255, 0.45);
+        background-color: #66b1ff;
+      }
+    }
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .questionnaire-container {
+    padding: 15px;
+
+    .questionnaire-header {
+      h1, h2 {
+        font-size: 20px;
+      }
+    }
+
+    .questionnaire-body {
+      .form-item-wrapper {
+        padding: 12px;
+        margin-bottom: 15px;
+
+        .item-number {
+          width: 22px;
+          height: 22px;
+          font-size: 12px;
+          left: -10px;
+          top: 12px;
+        }
+
+        .item-label {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
